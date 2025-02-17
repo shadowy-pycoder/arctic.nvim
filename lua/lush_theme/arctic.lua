@@ -312,7 +312,7 @@ local theme = lush(function(injected_functions)
     -- Identifiers
     sym("@variable") { fg = light_blue }, -- various variable names
     sym("@variable.builtin") { fg = dark_blue }, -- built-in variable names (e.g. `this`)
-    sym("@variable.parameter") { fg = orange }, -- parameters of a function, use a conspicuous color (VSCode uses the common light_blue)
+    sym("@variable.parameter") { fg = light_blue }, -- parameters of a function, use a conspicuous color (VSCode uses the common light_blue)
     sym("@variable.parameter.builtin") { sym("@variable.parameter") }, -- special parameters (e.g. `_`, `it`)
     sym("@variable.member") { fg = light_blue }, -- object and struct fields
 
@@ -343,7 +343,7 @@ local theme = lush(function(injected_functions)
 
     -- Types
     sym("@type") { fg = blue_green }, -- type or class definitions and annotations
-    sym("@type.builtin") { fg = dark_blue }, -- built-in types
+    sym("@type.builtin") { fg = blue_green }, -- built-in types
     sym("@type.definition") { fg = blue_green }, -- identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
 
     sym("@attribute") { fg = blue_green }, -- attribute annotations (e.g. Python decorators)
