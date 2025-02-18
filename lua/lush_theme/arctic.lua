@@ -171,7 +171,7 @@ local theme = lush(function(injected_functions)
     --
     -- Syntax
     --
-    Comment { fg = green, gui = 'italic' },
+    Comment { fg = green },
 
     Constant { fg = dark_blue },
     String { fg = brown },
