@@ -152,8 +152,8 @@ local theme = lush(function(injected_functions)
     SpecialKey { NonText },
     SpellBad { gui = 'undercurl', sp = error_red },
     SpellCap { gui = 'undercurl', sp = warn_yellow},
-    SpellLocal { gui = 'undercurl', sp = info_blue },
-    SpellRare  { gui = 'undercurl', sp = info_blue  },
+    SpellLocal { gui = 'undercurl', sp = dark_blue },
+    SpellRare  { gui = 'undercurl', sp = dark_blue  },
     StatusLine { bg = black4 },
     StatusLineNC { fg = gray, bg = black4 },
     TabLine { fg = gray4, bg = black4, gui = 'underline', sp = tab_border_fg }, -- tab.inactiveBackground, tab.inactiveForeground
@@ -239,7 +239,7 @@ local theme = lush(function(injected_functions)
     --
     DiagnosticError { fg = error_red },
     DiagnosticWarn { fg = warn_yellow },
-    DiagnosticInfo { fg = info_blue },
+    DiagnosticInfo { fg = dark_blue },
     DiagnosticHint { fg = hint_gray },
     DiagnosticOk { fg = ok_green },
     DiagnosticVirtualTextError { DiagnosticError, bg = '#332323' },
@@ -249,7 +249,7 @@ local theme = lush(function(injected_functions)
     DiagnosticVirtualTextOk { DiagnosticOk, bg = '#233323' },
     DiagnosticUnderlineError { gui = 'undercurl', sp = error_red },
     DiagnosticUnderlineWarn { gui = 'undercurl', sp = warn_yellow },
-    DiagnosticUnderlineInfo { gui = 'undercurl', sp = info_blue },
+    DiagnosticUnderlineInfo { gui = 'undercurl', sp = dark_blue },
     DiagnosticUnderlineHint { gui = 'undercurl', sp = hint_gray },
     DiagnosticUnderlineOk { gui = 'undercurl', sp = ok_green },
     DiagnosticFloatingError { DiagnosticError },
@@ -393,7 +393,7 @@ local theme = lush(function(injected_functions)
     sym("@comment.error") { fg = error_red }, -- error-type comments (e.g., `DEPRECATED:`)
     sym("@comment.warning") { fg = warn_yellow }, -- warning-type comments (e.g., `WARNING:`, `FIX:`)
     sym("@comment.hint") { fg = hint_gray },  -- note-type comments (e.g., `NOTE:`)
-    sym("@comment.info") { fg = info_blue }, -- info-type comments
+    sym("@comment.info") { fg = dark_blue }, -- info-type comments
     sym("@comment.todo") { Todo }, -- todo-type comments (e.g-, `TODO:`, `WIP:`)
 
     -- Markup
