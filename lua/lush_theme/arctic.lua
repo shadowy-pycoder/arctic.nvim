@@ -855,6 +855,13 @@ local theme = lush(function(injected_functions)
 		NvimTreeImageFile({ fg = gray4 }),
 		NvimTreeSpecialFile({ fg = gray4 }),
 		NvimTreeSymlink({ fg = gray4 }),
+		NvimTreeGitDeleted({ fg = error_red }),
+		NvimTreeGitDirty({ fg = error_red }),
+		NvimTreeGitIgnored({ fg = gray4 }),
+		NvimTreeGitNew({ fg = ok_green }),
+		NvimTreeGitRenamed({ fg = yellow_orange }),
+		NvimTreeGitStaged({ fg = ok_green }),
+		NvimTreeModifiedFile({ fg = yellow_orange }),
 	}
 end)
 ---@diagnostic enable
