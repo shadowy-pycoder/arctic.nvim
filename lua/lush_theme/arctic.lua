@@ -346,8 +346,8 @@ local theme = lush(function(injected_functions)
 		sym("@type.builtin")({ fg = blue_green }), -- built-in types
 		sym("@type.definition")({ fg = blue_green }), -- identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
 
-		sym("@attribute")({ fg = blue_green }), -- attribute annotations (e.g. Python decorators)
-		sym("@attribute.builtin")({ sym("@attribute") }), -- builtin annotations (e.g. `@property` in Python)
+		sym("@attribute")({ fg = yellow }), -- attribute annotations (e.g. Python decorators)
+		sym("@attribute.builtin")({ fg = blue_green }), -- builtin annotations (e.g. `@property` in Python)
 		sym("@property")({ sym("@variable.member") }), -- the key in key/value pairs
 
 		-- Function
