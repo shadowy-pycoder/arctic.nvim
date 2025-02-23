@@ -390,11 +390,11 @@ local theme = lush(function(injected_functions)
 		sym("@comment")({ Comment }), -- line and block comments
 		sym("@comment.documentation")({ sym("@comment") }), -- comments documenting code
 
-		sym("@comment.error")({ fg = error_red }), -- error-type comments (e.g., `DEPRECATED:`)
-		sym("@comment.warning")({ fg = warn_yellow }), -- warning-type comments (e.g., `WARNING:`, `FIX:`)
-		sym("@comment.hint")({ fg = hint_gray }), -- note-type comments (e.g., `NOTE:`)
+		sym("@comment.error")({ fg = dark_blue }), -- error-type comments (e.g., `DEPRECATED:`)
+		sym("@comment.warning")({ fg = dark_blue }), -- warning-type comments (e.g., `WARNING:`, `FIX:`)
+		sym("@comment.hint")({ fg = dark_blue }), -- note-type comments (e.g., `NOTE:`)
 		sym("@comment.info")({ fg = dark_blue }), -- info-type comments
-		sym("@comment.todo")({ Todo }), -- todo-type comments (e.g-, `TODO:`, `WIP:`)
+		sym("@comment.todo")({ fg = dark_blue }), -- todo-type comments (e.g-, `TODO:`, `WIP:`)
 
 		-- Markup
 		sym("@markup.strong")({ fg = norm_fg, gui = "bold" }), -- bold text
