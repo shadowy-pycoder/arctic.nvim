@@ -311,7 +311,7 @@ local theme = lush(function(injected_functions)
 
 		-- Identifiers
 		sym("@variable")({ fg = light_blue }), -- various variable names
-		sym("@variable.builtin")({ fg = dark_blue }), -- built-in variable names (e.g. `this`)
+		sym("@variable.builtin")({ fg = light_blue }), -- built-in variable names (e.g. `this`)
 		sym("@variable.parameter")({ fg = light_blue }), -- parameters of a function, use a conspicuous color (VSCode uses the common light_blue)
 		sym("@variable.parameter.builtin")({ sym("@variable.parameter") }), -- special parameters (e.g. `_`, `it`)
 		sym("@variable.member")({ fg = light_blue }), -- object and struct fields
