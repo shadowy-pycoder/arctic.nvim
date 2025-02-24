@@ -85,7 +85,7 @@ local theme = lush(function(injected_functions)
 		-- Git diff
 		DiffTextAdded({ bg = "#214d29" }), -- diffEditor.insertedTextBackground (DiffLineAdded as its background)
 		DiffTextDeleted({ bg = "#712928" }), -- diffEditor.removedTextBackground (DiffLineDeleted as its background)
-		DiffTextChanged({ bg = "#0E2FDC" }),
+		DiffTextChanged({ bg = "#5d4616" }),
 		DiffLineAdded({ bg = "#203424" }), -- diffEditor.insertedLineBackground
 		DiffLineDeleted({ bg = "#442423" }), -- diffEditor.removedLineBackground
 		DiffLineChanged({ bg = "#0e2f44" }),
