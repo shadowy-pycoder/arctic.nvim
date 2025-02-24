@@ -862,6 +862,7 @@ local theme = lush(function(injected_functions)
 		NvimTreeGitRenamed({ fg = yellow_orange }),
 		NvimTreeGitStaged({ fg = ok_green }),
 		NvimTreeModifiedFile({ fg = yellow_orange }),
+		NvimTreeFolderIcon({fg=yellow_orange}),
 
 		-- Rainbow delimiters
 
