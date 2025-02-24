@@ -331,7 +331,7 @@ local theme = lush(function(injected_functions)
 		sym("@string.escape")({ fg = yellow_orange }), -- escape sequences
 		sym("@string.special")({ SpecialChar }), -- other special strings (e.g. dates)
 		sym("@string.special.symbol")({ sym("@string.special") }), -- symbols or atoms
-		sym("@string.special.url")({ sym("@string.special") }), -- URIs (e.g. hyperlinks), it's url outside markup
+		sym("@string.special.url")({ Comment }), -- URIs (e.g. hyperlinks), it's url outside markup
 		sym("@string.special.path")({ sym("@string.special") }), -- filenames
 
 		sym("@character")({ Character }), -- character literals
