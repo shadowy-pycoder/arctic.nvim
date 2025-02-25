@@ -872,6 +872,11 @@ local theme = lush(function(injected_functions)
 
 		-- yaml
 		sym("@property.yaml")({ fg = dark_blue }),
+
+		-- requirements.txt
+		requirementsPackageName({fg = blue_green}),
+		requirementsVersionSpecifiers({fg = norm_fg}),
+		requirementsVersionControls({fg = brown}),
 	}
 end)
 ---@diagnostic enable
