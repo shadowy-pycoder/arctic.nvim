@@ -316,7 +316,7 @@ local theme = lush(function(injected_functions)
 		sym("@variable.parameter.builtin")({ sym("@variable.parameter") }), -- special parameters (e.g. `_`, `it`)
 		sym("@variable.member")({ fg = light_blue }), -- object and struct fields
 
-		sym("@constant")({ Constant }), -- constant identifiers
+		sym("@constant")({ fg = blue }), -- constant identifiers
 		sym("@constant.builtin")({ Constant }), -- built-in constant values
 		sym("@constant.macro")({ Constant }), -- constants defined by the preprocessor
 
