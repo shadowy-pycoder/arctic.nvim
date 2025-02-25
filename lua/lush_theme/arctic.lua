@@ -869,6 +869,9 @@ local theme = lush(function(injected_functions)
 		DelimOrange({ fg = "#ffcc00" } ),
 		DelimPink({ fg = dark_pink } ),
 		DelimBlue({ fg = blue } ),
+
+		-- yaml
+		sym("@property.yaml")({ fg = dark_blue }),
 	}
 end)
 ---@diagnostic enable
