@@ -177,7 +177,7 @@ local theme = lush(function(injected_functions)
 		--
 		-- Syntax
 		--
-		Comment({ fg = gray2 }),
+		Comment({ fg = green }),
 
 		Constant({ fg = dark_blue }),
 		String({ fg = brown }),
@@ -186,10 +186,10 @@ local theme = lush(function(injected_functions)
 		Boolean({ Constant }),
 		Float({ Number }),
 
-		Identifier({ fg = leaf }),
+		Identifier({ fg = light_blue }),
 		Function({ fg = yellow }),
 
-		Statement({ fg = subtle }),
+		Statement({ fg = dark_pink }),
 		Conditional({ Statement }),
 		Repeat({ Statement }),
 		Label({ Statement }),
@@ -197,7 +197,7 @@ local theme = lush(function(injected_functions)
 		Keyword({ fg = dark_blue }),
 		Exception({ Statement }),
 
-		PreProc({ fg = subtle }),
+		PreProc({ fg = dark_pink }),
 		Include({ PreProc }),
 		Define({ PreProc }),
 		Macro({ PreProc }),
@@ -316,17 +316,17 @@ local theme = lush(function(injected_functions)
 		-- To find all the capture names, see https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights)
 
 		-- Identifiers
-		sym("@variable")({ fg = leaf }), -- various variable names
-		sym("@variable.builtin")({ fg = leaf }), -- built-in variable names (e.g. `this`)
-		sym("@variable.parameter")({ fg = leaf }), -- parameters of a function, use a conspicuous color (VSCode uses the common leaf)
+		sym("@variable")({ fg = light_blue }), -- various variable names
+		sym("@variable.builtin")({ fg = light_blue }), -- built-in variable names (e.g. `this`)
+		sym("@variable.parameter")({ fg = light_blue }), -- parameters of a function, use a conspicuous color (VSCode uses the commo= light_blue)
 		sym("@variable.parameter.builtin")({ sym("@variable.parameter") }), -- special parameters (e.g. `_`, `it`)
-		sym("@variable.member")({ fg = leaf }), -- object and struct fields
+		sym("@variable.member")({ fg = light_blue }), -- object and struct fields
 
 		sym("@constant")({ fg = blue }), -- constant identifiers
 		sym("@constant.builtin")({ Constant }), -- built-in constant values
 		sym("@constant.macro")({ Constant }), -- constants defined by the preprocessor
 
-		sym("@module")({ fg = rose }), -- modules or namespaces
+		sym("@module")({ fg = blue_green }), -- modules or namespaces
 		sym("@module.builtin")({ sym("@module") }), -- built-in modules or namespaces
 		sym("@label")({ fg = label_fg }), -- GOTO and other labels (e.g. `label:` in C), including heredoc labels
 
@@ -348,12 +348,12 @@ local theme = lush(function(injected_functions)
 		sym("@number.float")({ Float }), -- floating-point number literals
 
 		-- Types
-		sym("@type")({ fg = rose }), -- type or class definitions and annotations
-		sym("@type.builtin")({ fg = rose }), -- built-in types
-		sym("@type.definition")({ fg = rose }), -- identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
+		sym("@type")({ fg = blue_green }), -- type or class definitions and annotations
+		sym("@type.builtin")({ fg = blue_green }), -- built-in types
+		sym("@type.definition")({ fg = blue_green }), -- identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
 
 		sym("@attribute")({ fg = yellow }), -- attribute annotations (e.g. Python decorators)
-		sym("@attribute.builtin")({ fg = rose }), -- builtin annotations (e.g. `@property` in Python)
+		sym("@attribute.builtin")({ fg = blue_green }), -- builtin annotations (e.g. `@property` in Python)
 		sym("@property")({ sym("@variable.member") }), -- the key in key/value pairs
 
 		-- Function
@@ -365,19 +365,19 @@ local theme = lush(function(injected_functions)
 		sym("@function.method")({ sym("@function") }), -- method definitions
 		sym("@function.method.call")({ sym("@function.call") }), -- method calls
 
-		sym("@constructor")({ fg = rose }), -- constructor calls and definitions
+		sym("@constructor")({ fg = blue_green }), -- constructor calls and definitions
 		sym("@operator")({ Operator }), -- symbolic operators (e.g. `+` / `*`)
 
 		-- Keyword
 		sym("@keyword")({ Keyword }), -- keywords not fitting into specific categories
-		sym("@keyword.coroutine")({ fg = subtle }), -- keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
+		sym("@keyword.coroutine")({ fg = dark_pink }), -- keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
 		sym("@keyword.function")({ fg = dark_blue }), -- keywords that define a function (e.g. `func` in Go, `def` in Python)
 		sym("@keyword.operator")({ fg = dark_blue }), -- operators that are English words (e.g. `and` / `or`)
 		sym("@keyword.import")({ Include }), -- keywords for including modules (e.g. `import` / `from` in Python)
 		sym("@keyword.type")({ fg = dark_blue }), -- keywords describing composite types (e.g. `struct`, `enum`)
 		sym("@keyword.modifier")({ fg = dark_blue }), -- keywords modifying other constructs (e.g. `const`, `static`, `public`)
 		sym("@keyword.repeat")({ Repeat }), -- keywords related to loops (e.g. `for` / `while`)
-		sym("@keyword.return")({ fg = subtle }), --  keywords like `return` and `yield`
+		sym("@keyword.return")({ fg = dark_pink }), --  keywords like `return` and `yield`
 		sym("@keyword.debug")({ Debug }), -- keywords related to debugging
 		sym("@keyword.exception")({ Exception }), -- keywords related to exceptions (e.g. `throw` / `catch`)
 
@@ -417,7 +417,7 @@ local theme = lush(function(injected_functions)
 		sym("@markup.heading.6")({ sym("@markup.heading") }),
 
 		sym("@markup.quote")({ fg = green }), -- block quotes
-		sym("@markup.math")({ fg = rose }), -- math environments (e.g. `$ ... $` in LaTeX)
+		sym("@markup.math")({ fg = blue_green }), -- math environments (e.g. `$ ... $` in LaTeX)
 
 		sym("@markup.link")({ fg = brown }), -- text references, footnotes, citations, etc.
 		sym("@markup.link.label")({ sym("@markup.link") }), -- non-url links
@@ -436,12 +436,12 @@ local theme = lush(function(injected_functions)
 
 		sym("@tag")({ fg = dark_blue }), -- XML tag names
 		sym("@tag.builtin")({ sym("@tag") }), -- builtin tag names (e.g. HTML5 tags)
-		sym("@tag.attribute")({ fg = leaf }), -- XML tag attributes
+		sym("@tag.attribute")({ fg = light_blue }), -- XML tag attributes
 		sym("@tag.delimiter")({ fg = gray3 }), -- XML tag delimiters
 
 		-- Language specific
 		-- Lua
-		sym("@variable.member.lua")({ fg = rose }),
+		sym("@variable.member.lua")({ fg = blue_green }),
 
 		--
 		-- LSP semantic tokens
@@ -472,7 +472,7 @@ local theme = lush(function(injected_functions)
 		sym("@lsp.type.operator")({ sym("@operator") }),
 		sym("@lsp.type.decorator")({ sym("@attribute") }),
 		sym("@lsp.type.escapeSequence")({ sym("@string.escape") }),
-		sym("@lsp.type.formatSpecifier")({ fg = leaf }),
+		sym("@lsp.type.formatSpecifier")({ fg = light_blue }),
 		sym("@lsp.type.builtinType")({ sym("@type.builtin") }),
 		sym("@lsp.type.typeAlias")({ sym("@type.definition") }),
 		sym("@lsp.type.unresolvedReference")({ gui = "undercurl", sp = error_red }),
@@ -721,7 +721,7 @@ local theme = lush(function(injected_functions)
 		TelescopePreviewBorder({ TelescopePromptBorder }),
 		TelescopeSelection({ PmenuSel }),
 		TelescopeSelectionCaret({ TelescopeSelection }),
-		TelescopeMultiIcon({ fg = rose }),
+		TelescopeMultiIcon({ fg = blue_green }),
 		TelescopeMatching({ CmpItemAbbrMatch }),
 		TelescopeNormal({ Normal }),
 		TelescopePromptPrefix({ Icon }),
@@ -776,7 +776,7 @@ local theme = lush(function(injected_functions)
 		BqfPreviewCursorLine({ PeekViewCursorLine }),
 		BqfPreviewRange({ PeekViewMatchHighlight }),
 		BqfPreviewBufLabel({ Description }),
-		BqfSign({ fg = rose }),
+		BqfSign({ fg = blue_green }),
 
 		--
 		-- mg979/tabline.nvim
@@ -880,7 +880,7 @@ local theme = lush(function(injected_functions)
 		sym("@property.yaml")({ fg = dark_blue }),
 
 		-- requirements.txt
-		requirementsPackageName({fg = rose}),
+		requirementsPackageName({fg = blue_green}),
 		requirementsVersionSpecifiers({fg = norm_fg}),
 		requirementsVersionControls({fg = brown}),
 	}
@@ -888,3 +888,4 @@ end)
 ---@diagnostic enable
 
 return theme
+
