@@ -194,7 +194,7 @@ local theme = lush(function(injected_functions)
 		Repeat({ Statement }),
 		Label({ Statement }),
 		Operator({ fg = norm_fg }),
-		Keyword({ fg = dark_blue }),
+		Keyword({ fg = dark_pink }),
 		Exception({ Statement }),
 
 		PreProc({ fg = dark_pink }),
