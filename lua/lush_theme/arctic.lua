@@ -332,7 +332,7 @@ local theme = lush(function(injected_functions)
 		sym("@constant.builtin")({ Constant }), -- built-in constant values
 		sym("@constant.macro")({ Constant }), -- constants defined by the preprocessor
 
-		sym("@module")({ fg = override_blue_green }), -- modules or namespaces
+		sym("@module")({ fg = override_light_blue }), -- modules or namespaces
 		sym("@module.builtin")({ sym("@module") }), -- built-in modules or namespaces
 		sym("@label")({ fg = label_fg }), -- GOTO and other labels (e.g. `label:` in C), including heredoc labels
 
