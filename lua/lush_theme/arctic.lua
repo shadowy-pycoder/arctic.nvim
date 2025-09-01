@@ -12,6 +12,7 @@ local brown = "#CE9178"
 local yellow = "#DCDCAA"
 local yellow_orange = "#D7BA7D"
 local green = "#6A9955"
+local green_exec = "#00FF9A"
 local blue_green = "#4EC9B0"
 local light_green = "#B5CEA8"
 local blue = "#4fc1ff"
@@ -857,7 +858,7 @@ local theme = lush(function(injected_functions)
 		NvimTreeEmptyFolderName({ fg = blue }),
 		NvimTreeOpenedFolderName({ fg = blue }),
 		NvimTreeSymlinkFolderName({ fg = blue }),
-		NvimTreeExecFile({ fg = norm_fg }),
+		NvimTreeExecFile({ fg = green_exec, bold = true }),
 		NvimTreeImageFile({ fg = gray4 }),
 		NvimTreeSpecialFile({ fg = gray4 }),
 		NvimTreeSymlink({ fg = gray4 }),
@@ -868,24 +869,23 @@ local theme = lush(function(injected_functions)
 		NvimTreeGitRenamed({ fg = yellow_orange }),
 		NvimTreeGitStaged({ fg = ok_green }),
 		NvimTreeModifiedFile({ fg = yellow_orange }),
-		NvimTreeFolderIcon({fg=yellow_orange}),
+		NvimTreeFolderIcon({ fg = yellow_orange }),
 
 		-- Rainbow delimiters
 
-		DelimOrange({ fg = "#ffcc00" } ),
-		DelimPink({ fg = dark_pink } ),
-		DelimBlue({ fg = blue } ),
+		DelimOrange({ fg = "#ffcc00" }),
+		DelimPink({ fg = dark_pink }),
+		DelimBlue({ fg = blue }),
 
 		-- yaml
 		sym("@property.yaml")({ fg = dark_blue }),
 
 		-- requirements.txt
-		requirementsPackageName({fg = blue_green}),
-		requirementsVersionSpecifiers({fg = norm_fg}),
-		requirementsVersionControls({fg = brown}),
+		requirementsPackageName({ fg = blue_green }),
+		requirementsVersionSpecifiers({ fg = norm_fg }),
+		requirementsVersionControls({ fg = brown }),
 	}
 end)
 ---@diagnostic enable
 
 return theme
-
