@@ -884,6 +884,21 @@ local theme = lush(function(injected_functions)
 		requirementsPackageName({ fg = blue_green }),
 		requirementsVersionSpecifiers({ fg = norm_fg }),
 		requirementsVersionControls({ fg = brown }),
+
+		-- compile-mode
+		-- CompileModeMessage guifg=NONE gui=underline
+		CompileModeMessageRow({ fg = yellow_orange }),
+		CompileModeMessageCol({ fg = ok_green }),
+
+		CompileModeError({ fg = error_red }),
+		CompileModeWarning({ fg = warn_yellow }),
+		CompileModeInfo({ fg = ok_green }),
+		--
+		CompileModeCommandOutput({ fg = "#71989C" }),
+		CompileModeDirectoryMessage({ fg = "#71989C" }),
+		CompileModeOutputFile({ fg = yellow_orange }),
+		-- CompileModeCheckResult cterm=bold gui=bold guifg=#ff9966
+		-- CompileModeCheckTarget guifg=#ff9966
 	}
 end)
 ---@diagnostic enable
