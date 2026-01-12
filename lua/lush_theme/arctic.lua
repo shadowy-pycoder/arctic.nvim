@@ -891,7 +891,7 @@ local theme = lush(function(injected_functions)
 		CompileModeMessageRow({ fg = yellow_orange }),
 		CompileModeMessageCol({ fg = ok_green }),
 
-		CompileModeError({ fg = da }),
+		CompileModeError({ fg = dark_red }),
 		CompileModeWarning({ fg = warn_yellow }),
 		CompileModeInfo({ fg = ok_green }),
 		--
