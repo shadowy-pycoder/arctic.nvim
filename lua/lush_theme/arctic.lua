@@ -46,7 +46,8 @@ local float_border_fg = "#454545"
 local indent_guide_fg = "#404040"
 local indent_guide_scope_fg = "#707070"
 local label_fg = "#c8c8c8"
-local tab_border_fg = "#2b2b2b"
+-- local tab_border_fg = "#2b2b2b"
+local tab_border_fg = norm_bg
 
 -- rose pine pallete
 local rose = "#ebbcba"
@@ -163,9 +164,9 @@ local theme = lush(function(injected_functions)
 		SpellRare({ gui = "undercurl", sp = dark_blue }),
 		StatusLine({ bg = black4 }),
 		StatusLineNC({ fg = gray, bg = black4 }),
-		TabLine({ fg = gray4, bg = black4, gui = "underline", sp = tab_border_fg }), -- tab.inactiveBackground, tab.inactiveForeground
-		TabLineFill({ fg = "NONE", bg = black4, gui = "underline", sp = tab_border_fg }), -- editorGroupHeader.tabsBackground
-		TabLineSel({ fg = white, bg = Normal.bg, gui = "bold, underline", sp = tab_border_fg }), -- tab.activeBackground, tab.activeForeground
+		TabLine({ fg = gray4, bg = Normal.bg, gui = "underline", sp = tab_border_fg }), -- tab.inactiveBackground, tab.inactiveForeground
+		TabLineFill({ fg = "NONE", bg = Normal.bg, gui = "underline", sp = tab_border_fg }), -- editorGroupHeader.tabsBackground
+		TabLineSel({ fg = Normal.fg, bg = Normal.bg, gui = "bold, underline", sp = tab_border_fg }), -- tab.activeBackground, tab.activeForeground
 		Title({ fg = dark_blue, gui = "bold" }),
 		Visual({ bg = "#264F78" }), -- editor.selectionBackground
 		-- VisualNOS { },
@@ -890,7 +891,7 @@ local theme = lush(function(injected_functions)
 		CompileModeMessageRow({ fg = yellow_orange }),
 		CompileModeMessageCol({ fg = ok_green }),
 
-		CompileModeError({ fg = dark_red }),
+		CompileModeError({ fg = da }),
 		CompileModeWarning({ fg = warn_yellow }),
 		CompileModeInfo({ fg = ok_green }),
 		--
