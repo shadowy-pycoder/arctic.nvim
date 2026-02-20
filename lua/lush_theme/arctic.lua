@@ -342,6 +342,7 @@ local theme = lush(function(injected_functions)
 		sym("@string.special.url")({ Comment }), -- URIs (e.g. hyperlinks), it's url outside markup
 		sym("@string.special.path")({ sym("@string.special") }), -- filenames
 		sym("@string.prefix")({ fg = dark_blue }), -- f-string
+		sym("@async_func_keyword")({ fg = dark_blue }), -- async def
 
 		sym("@character")({ Character }), -- character literals
 		sym("@character.special")({ SpecialChar }), -- special characters (e.g. wildcards)
