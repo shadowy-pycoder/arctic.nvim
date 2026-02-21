@@ -135,7 +135,7 @@ local theme = lush(function(injected_functions)
 		SignColumn({ bg = Normal.bg }),
 		IncSearch({ bg = "#9e6a03" }), -- editor.findMatchBackground
 		-- Substitute { },
-		MatchParen({ bg = gray, gui = "bold, underline" }),
+		MatchParen({ bg = gray, gui = "bold" }),
 		ModeMsg({ fg = norm_fg }),
 		MsgArea({ fg = norm_fg }),
 		-- MsgSeparator { },
